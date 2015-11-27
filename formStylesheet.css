@@ -1,0 +1,122 @@
+/* CSS Form Stylesheet - ID:620076399 */
+
+
+@import url(http://fonts.googleapis.com/css?family=Exo:100,200,400);
+
+.error {
+	border-color:#FF0000;
+	 background-color: #FF0000;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	background: #fff;
+
+	color: #000;
+	font-family: 'Tahoma';
+	font-size: 13px;
+}
+
+.header{
+	position: absolute;
+	top: calc(50% - 35px);
+	left: calc(50% - 355px);
+	z-index: 2;
+}
+
+.header div{
+	float: left;
+	color: #000;
+	font-family: 'Exo', sans-serif;
+	font-size: 35px;
+	font-weight: 200px;
+}
+
+.header div span{
+	color: #5379fa !important;
+}
+
+.description label
+{
+	visibility: hidden;
+}
+
+.form {
+	position: absolute;
+	top: calc(50% - 155px);
+	left: calc(50% - 135px);
+	height: 150px;
+	width: 350px;
+	padding: 10px;
+	z-index: 2;
+	margin: auto;
+}
+
+
+
+.form input[type=text]{
+	width: 250px;
+	height: 30px;
+	background: #000;
+	border: 2px solid rgba(255,255,255,0.6);
+	border-radius: 2px;
+	color: #fff;
+	font-weight: 400;
+	padding: 4px;
+}
+
+.form input[type=password]{
+	width: 250px;
+	height: 30px;
+	background: #000;
+	border: 2px solid rgba(255,255,255,0.6);
+	border-radius: 2px;
+	color: #fff;
+	font-weight: 400;
+	padding: 4px;
+	margin-top: 10px;
+}
+
+.form input[type=submit]{
+	width: 260px;
+	height: 35px;
+	background: #000;
+	border: 1px solid #fff;
+	cursor: pointer;
+	border-radius: 2px;
+	color: #5379fa;;
+	font-weight: 400;
+	padding: 6px;
+	margin-top: 10px;
+}
+
+.form input[type=submit]:hover{
+	opacity: 0.8;
+}
+
+.form input[type=submit]:active{
+	opacity: 0.6;
+}
+
+.form input[type=text]:focus{
+	outline: none;
+	border: 1px solid rgba(255,255,255,0.9);
+}
+
+.form input[type=password]:focus{
+	outline: none;
+	border: 1px solid rgba(255,255,255,0.9);
+}
+
+.form input[type=submit]:focus{
+	outline: none;
+}
+
+::-webkit-input-placeholder{
+   color: rgba(255,255,255,0.6);
+}
+
+::-moz-input-placeholder{
+   color: rgba(255,255,255,0.6);
+}
