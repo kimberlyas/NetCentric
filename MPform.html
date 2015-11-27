@@ -1,0 +1,42 @@
+<!-- ==== PROBLEM 2: XHTML CODE TO CREATE A FORM ==== ID:620076399 -->
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta charset="UTF-8">
+	<!-- Browser Title Bar -->
+	<title>MP creation form</title>
+	<!-- Stylesheet -->
+	<link rel="stylesheet" type="text/css" href="styles/formStylesheet.css" />
+	<!-- JavaScript validation function -->
+	<script type="text/javascript" src="scripts/formValidation.js"></script>
+</head>
+<body>
+	<div class="header">
+		<div>MP<span>Form</span></div>
+	</div>
+	<!-- Form Creation -->
+	<form id="MPform" onSubmit="validate()" method="post" >
+	<div class="form">
+		<!-- Text Widgets -->
+		<div class="description"><label><strong>Name<strong></label></div>
+			<input type="text" placeholder="First Name" id="firstName" name="firstName"><br>
+			<input type="text" placeholder="Last Name" id="lastName" name="lastName"><br>
+		<div class="description"><label>Constituency</label></div>
+			<input type="text" id="constit" placeholder="Constituency" name="constit"><br>	
+		<div class="description"><label>Email</label></div>
+			<input type="text" id="email" placeholder="Email" name="email"><br>	
+		<div class="description"><label class="description">Years of Service</label></div>
+		  <input type="text" id="serviceYears" placeholder="Years of Service" name="serviceYears"><br>
+		<div class="description"><label class="description">Password</label></div>
+			<input type="password" placeholder="password" id="password" name="password">
+			<input type="password" placeholder="re-type password" id="password2" name="password2"><br>
+		<!-- Hidden Field -->
+	    <input type="hidden" id="secret" name="secret" value="6eb6ac241942dc7226aeb"><br>
+	    <!-- Submit button -->
+		<input type="submit" id="submit" value="Submit">
+	</div>
+	</form>			
+</body>
+</html>	
