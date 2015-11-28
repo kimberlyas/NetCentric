@@ -5,26 +5,29 @@ function validate()
 {
 	// Get form 
 	var form = document.forms["MPform"];
-
-	
+	var valid = true; // flag to check for errors
+	var errors = []; // array for error msgs
 
 	if (form.firstName.value == "")
 	{
 		// Error detected, colour field in red
 		form.firstName.style.backgroundColor = "red";
-		return false;
+		errors.push("First Name required");
+		valid = false;
 
 	}
 	if (form.lastName.value == "")
 	{
 		form.lastName.style.backgroundColor = "red";
-		return false;
+		errors.push("Last Name required");
+		valid = false;
 
 	}
 	if (form.email.value == "")
 	{
 		form.email.style.backgroundColor = "red";
-		return false;
+		errors.push("Email required");
+		valid = false;
 
 	}
 	else
@@ -34,14 +37,16 @@ function validate()
 		if (form.email.value.search(regEx) == -1)
 		{
 			form.email.style.backgroundColor = "red";
-			return false;
+			errors.push("Incorrect email format");
+			valid = false;
 		}
 	}
 	if (form.serviceYears.value == "")
 	{
 	
 		form.serviceYears.style.backgroundColor = "red";
-		return false;
+		errors.push("Years of Service required");
+		valid = false;
 	}
 	else
 	{
@@ -49,14 +54,16 @@ function validate()
 		if (!(form.serviceYears.value > 0 && form.serviceYears.value < 50))
 		{
 			form.serviceYears.style.backgroundColor = "red";
-			return false;
+			errors.push("Years of Service out of range");
+			valid = false;
 		}
 	}
 
 	if (form.constit.value == "")
 	{
 		form.constit.style.backgroundColor = "red";
-		return false;
+		errors.push("Constituency required");
+		valid = false;
 	}
 	
 	if(form.password.value == "" || form.password2.value == "")
@@ -64,7 +71,9 @@ function validate()
 		
     	form.password.style.backgroundColor = "red";
     	form.password2.style.backgroundColor = "red";
-    	return false;
+    	errors.push("Passwords required");
+    	valid = false;
+    }
 	else
 	{
 		// Check if the values of passwords entered match
@@ -72,10 +81,16 @@ function validate()
   		{
     		form.password.style.backgroundColor = "red";
     		form.password2.style.backgroundColor = "red";
-    		return false;
+    		errors.push("Passwords entered do not match");
+    		valid = false;
     	}
 	}
 
-	return true;
+	if (!valid)
+	{
+		alert(errors);
+	}
+
+	return valid;
 		  
 }
